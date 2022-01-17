@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ad54ed871ff59429ab2089e612740e, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  gameSettings:
+    playerForwardMovementSpeed: 5
+    playerSideMovementSpeed: 15
+    playerSidePositionLimit: 1.35
+    cameraSmoothSpeed: 0.3
+    cameraOffset: {x: 0, y: 3.5, z: -8}
+    totalBonusCount: 3
+    totalCrystalCount: 12
+    minimalOffset: 1.25
+    minimalSpawnPosition: 3

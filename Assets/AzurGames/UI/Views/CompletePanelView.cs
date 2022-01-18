@@ -64,7 +64,11 @@ namespace AzurGames.UI
                 .Append(bonusCounterCanvasGroup.DOFade(1, _duration).From(0))
                 .Append(crystalCounterCanvasGroup.DOFade(1, _duration).From(0))
                 .Append(buttonCanvasGroup.DOFade(1, _duration).From(0))
-                .OnComplete(() => sequence.Kill());
+                .OnComplete(() =>
+                {
+                    restartButton.interactable = true;
+                    sequence.Kill();
+                });
         }
 
         public void Hide()
@@ -76,6 +80,7 @@ namespace AzurGames.UI
                 .Join(backgroundImage.DOFade(0, _duration))
                 .OnComplete(() =>
                 {
+                    restartButton.interactable = false;
                     gameObject.SetActive(false);
                     sequence.Kill();
                 });

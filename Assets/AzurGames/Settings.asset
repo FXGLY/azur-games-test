@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSettings:
     playerForwardMovementSpeed: 5
-    playerSideMovementSpeed: 15
+    playerSideMovementSpeed: 25
     playerSidePositionLimit: 1.35
     cameraSmoothSpeed: 0.3
     cameraOffset: {x: 0, y: 3.5, z: -8}

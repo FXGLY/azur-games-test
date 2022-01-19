@@ -1,3 +1,4 @@
+using System;
 using AzurGames.Main;
 using UnityEngine;
 
@@ -71,6 +72,11 @@ namespace AzurGames.UI
             bonusCounterView.Hide();
             crystalCounterView.Hide();
             completePanelView.Show();
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.OnStateChange -= SetState;
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using AzurGames.Main;
 using DG.Tweening;
 using TMPro;
@@ -83,6 +84,12 @@ namespace AzurGames.UI
             {
                 PlayerPrefs.SetInt("BonusCount", _currentCount);
             }
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.OnTakeCollectable -= ChangeValue;
+            GameManager.OnRestartLevel -= Reset;
         }
     }
 }

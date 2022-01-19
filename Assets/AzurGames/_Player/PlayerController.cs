@@ -1,3 +1,4 @@
+using System;
 using AzurGames.Main;
 using Zenject;
 
@@ -83,6 +84,12 @@ namespace AzurGames.Player
             _canMove = true;
             _positionX = 0;
             GameManager.SetState(State.Start);
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.OnStateChange -= OnLevelComplete;
+            GameManager.OnRestartLevel -= Respawn;
         }
     }
 }

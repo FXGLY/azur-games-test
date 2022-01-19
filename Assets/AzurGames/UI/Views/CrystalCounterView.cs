@@ -1,3 +1,4 @@
+using System;
 using AzurGames.Main;
 using DG.Tweening;
 using TMPro;
@@ -62,6 +63,11 @@ namespace AzurGames.UI
             _currentCount++;
             PlayerPrefs.SetInt("CrystalCount", _currentCount);
             counterText.text = _currentCount.ToString();
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.OnTakeCrystal -= ChangeValue;
         }
     }
 }

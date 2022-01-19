@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using AzurGames.Main;
 using UnityEngine;
 using Zenject;
+using Random = UnityEngine.Random;
 
 namespace AzurGames.Environment
 {
@@ -97,6 +99,11 @@ namespace AzurGames.Environment
             _collectablesList.Clear();
 
             _tempForwardPositions = new List<float>(_forwardPositions);
+        }
+
+        private void OnDestroy()
+        {
+            GameManager.OnRestartLevel -= Spawn;
         }
     }
 }
